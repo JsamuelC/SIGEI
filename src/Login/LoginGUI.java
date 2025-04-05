@@ -1,12 +1,17 @@
 package Login;
 
-import java.awt.BorderLayout;
+
+import Conect.Conection;
 import java.awt.EventQueue;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.border.EmptyBorder;
-import java.awt.FlowLayout;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -23,7 +28,7 @@ public class LoginGUI extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField LogUser;
-	private JTextField LogPsw;
+	private JPasswordField LogPsw;
 
 	/**
 	 * Launch the application.
@@ -69,7 +74,7 @@ public class LoginGUI extends JFrame {
 		panel.add(LogUser);
 		LogUser.setColumns(10);
 		
-		LogPsw = new JTextField();
+		LogPsw = (JPasswordField) new JPasswordField();
 		LogPsw.setColumns(10);
 		LogPsw.setBounds(89, 262, 157, 30);
 		panel.add(LogPsw);
@@ -84,12 +89,39 @@ public class LoginGUI extends JFrame {
 		
 	});}
 	
+	private void mostrarMensaje(String  Mensaje) {
+		JOptionPane.showMessageDialog(this,Mensaje);
+	}
+	
 	private void btnLogin() {
-		String userLogin = LogUser.getText();
-		String PswLogin = LogPsw.getText();
-		if (userLogin.isEmpty() || PswLogin.isEmpty() ) {
-			JOptionPane.showMessageDialog(this, "Porfavor Llenar Todos los Campos");
+	 String usuario = this.LogUser.getText();
+	 String contra = new String(this.LogPsw.getPassword());
+	 
+	 try (Connection conn = Conection.getConnection()){
+		String query = "SELECT * FROM  Usuarios WHERE nombre = ? AND contraseña = ?";
+		PreparedStatement stmt = conn.prepareStatement(query);
+		stmt.setString(1, usuario);
+		stmt.setString(2, contra);
+		
+		ResultSet rs = stmt.executeQuery();
+		if(rs.next()) {
+			mostrarMensaje("Welcome " + usuario);
+			
+			
+			
+		} else {
+			mostrarMensaje("Usuario o Contraseña Incorrectos");
+			
 		}
+	 } catch( SQLException ex) {
+		 ex.printStackTrace();
+		 mostrarMensaje(" Error de Conexión: " + ex.getMessage());
+	 }
+		
 		
 	}
-}
+		
+	}
+
+	
+
