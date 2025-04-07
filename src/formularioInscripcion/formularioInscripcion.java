@@ -179,6 +179,7 @@ public class formularioInscripcion extends JFrame {
 						mostrarMensaje("Error de Conexión: " + ex.getMessage());
 					}
 				}
+				
 					
 					private void mostrarMensaje(String mensaje) {
 						JOptionPane.showMessageDialog(this, mensaje);

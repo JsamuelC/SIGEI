@@ -19,7 +19,6 @@ import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
-import java.awt.Font;
 import javax.swing.ImageIcon;
 import java.awt.Color;
 import javax.swing.JTextField;
@@ -65,13 +64,13 @@ public class LoginGUI extends JFrame {
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
-		JLabel lblNewLabel = new JLabel("New label");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\josue\\OneDrive\\Imágenes\\Capturas de pantalla\\icon login.png"));
-		lblNewLabel.setBounds(97, 26, 149, 151);
+		JLabel lblNewLabel = new JLabel("\r\n");
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\josue\\Desktop\\Proyecto final PROG\\redimensionada foto login(2) (1).png"));
+		lblNewLabel.setBounds(113, 43, 104, 135);
 		panel.add(lblNewLabel);
 		
 		LogUser = new JTextField();
-		LogUser.setBounds(89, 221, 157, 30);
+		LogUser.setBounds(89, 203, 157, 30);
 		panel.add(LogUser);
 		LogUser.setColumns(10);
 		

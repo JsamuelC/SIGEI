@@ -2,7 +2,7 @@ package MenuPrincipalGUI;
 
 import java.awt.EventQueue;
 import formularioInscripcion.formularioInscripcion;
-
+import registroUsuario.registroUsuario;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -73,6 +73,8 @@ public class Menu extends JFrame {
 		JButton registroUsuariobtn = new JButton("Registrar Usuario");
 		registroUsuariobtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				registroUsuario registroUsuario = new registroUsuario();
+				registroUsuario.setVisible(true);
 			}
 		});
 		registroUsuariobtn.setBounds(316, 151, 142, 47);
