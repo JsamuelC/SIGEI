@@ -21,6 +21,7 @@ import javax.swing.ButtonGroup;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JRadioButton;
+import java.awt.Color;
 
 public class registroUsuario extends JFrame {
 
@@ -59,6 +60,7 @@ public class registroUsuario extends JFrame {
 		contentPane.setLayout(null);
 
 		JPanel panel = new JPanel();
+		panel.setBackground(new Color(135, 206, 235));
 		panel.setBounds(10, 11, 316, 496);
 		contentPane.add(panel);
 		panel.setLayout(null);
@@ -99,11 +101,13 @@ public class registroUsuario extends JFrame {
 		panel.add(contratxt);
 
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\josue\\Desktop\\Proyecto final PROG\\redimensionada foto login(2) (1).png"));
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\josue\\Desktop\\Proyecto final PROG\\imagen\\redimensionada foto login(2) (1).png"));
 		lblNewLabel.setBounds(95, 35, 108, 109);
 		panel.add(lblNewLabel);
 
 		JButton btnRegistar = new JButton("Registrar");
+		btnRegistar.setBackground(new Color(30, 144, 255));
+		btnRegistar.setFont(new Font("Arial", Font.BOLD, 12));
 		btnRegistar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btnRegistrarse();
@@ -119,12 +123,14 @@ public class registroUsuario extends JFrame {
 
 
 		adminrdbtn = new JRadioButton("Administrador");
-		adminrdbtn.setFont(new Font("Arial", Font.PLAIN, 11));
+		adminrdbtn.setBackground(new Color(135, 206, 235));
+		adminrdbtn.setFont(new Font("Arial", Font.BOLD, 12));
 		adminrdbtn.setBounds(46, 410, 109, 23);
 		panel.add(adminrdbtn);
 
 		normalrdbt = new JRadioButton("Normal");
-		normalrdbt.setFont(new Font("Arial", Font.PLAIN, 11));
+		normalrdbt.setBackground(new Color(135, 206, 235));
+		normalrdbt.setFont(new Font("Arial", Font.BOLD, 12));
 		normalrdbt.setBounds(182, 410, 109, 23);
 		panel.add(normalrdbt);
 

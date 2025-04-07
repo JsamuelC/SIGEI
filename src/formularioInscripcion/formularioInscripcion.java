@@ -21,6 +21,7 @@ import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Color;
 
 public class formularioInscripcion extends JFrame {
 
@@ -58,6 +59,7 @@ public class formularioInscripcion extends JFrame {
 		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 450, 588);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(135, 206, 235));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
@@ -94,10 +96,12 @@ public class formularioInscripcion extends JFrame {
 		contentPane.add(lblGenero);
 		
 	    rdbtnMasculino = new JRadioButton("Masculino");
+	    rdbtnMasculino.setBackground(new Color(135, 206, 235));
 		rdbtnMasculino.setBounds(106, 218, 111, 23);
 		contentPane.add(rdbtnMasculino);
 		
 		rdbtnFemenino = new JRadioButton("Femenino");
+		rdbtnFemenino.setBackground(new Color(135, 206, 235));
 		rdbtnFemenino.setBounds(219, 218, 111, 23);
 		contentPane.add(rdbtnFemenino);
 		
@@ -138,6 +142,8 @@ public class formularioInscripcion extends JFrame {
 		textCarrera.setColumns(10);
 		
 		JButton btnEnviar = new JButton("Enviar");
+		btnEnviar.setFont(new Font("Arial", Font.BOLD, 12));
+		btnEnviar.setBackground(new Color(30, 144, 255));
 		btnEnviar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			btnEnviar();

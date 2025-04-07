@@ -11,6 +11,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 import java.awt.Font;
+import javax.swing.JLabel;
+import java.awt.Color;
 
 public class Menu extends JFrame {
 
@@ -46,17 +48,20 @@ public class Menu extends JFrame {
 		contentPane.setLayout(null);
 		
 		JPanel panel = new JPanel();
+		panel.setBackground(new Color(135, 206, 235));
 		panel.setBounds(10, 11, 542, 257);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
 		JButton Estudiantesbtn = new JButton("Estudiantes");
+		Estudiantesbtn.setBackground(new Color(30, 144, 255));
 		Estudiantesbtn.setIcon(new ImageIcon("C:\\Users\\josue\\Desktop\\Proyecto final PROG\\imagen\\Estudiantes red(1) (1).png"));
 		Estudiantesbtn.setFont(new Font("Arial", Font.PLAIN, 11));
 		Estudiantesbtn.setBounds(122, 81, 142, 47);
 		panel.add(Estudiantesbtn);
 		
 		JButton Calificacionbtn = new JButton("Calificaciones");
+		Calificacionbtn.setBackground(new Color(30, 144, 255));
 		Calificacionbtn.setIcon(new ImageIcon("C:\\Users\\josue\\Desktop\\Proyecto final PROG\\imagen\\Calificionesred (1) (1).png"));
 		Calificacionbtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -67,6 +72,7 @@ public class Menu extends JFrame {
 		
 		
 		JButton Inscripcionbtn = new JButton("Inscripcion");
+		Inscripcionbtn.setBackground(new Color(30, 144, 255));
 		Inscripcionbtn.setFont(new Font("Arial", Font.PLAIN, 11));
 		Inscripcionbtn.setIcon(new ImageIcon("C:\\Users\\josue\\Desktop\\Proyecto final PROG\\imagen\\inscripcionred(2) (1).png"));
 		Inscripcionbtn.setBounds(122, 151, 142, 47);
@@ -78,6 +84,7 @@ public class Menu extends JFrame {
 		}});
 		
 		JButton registroUsuariobtn = new JButton("Registrar Usuario");
+		registroUsuariobtn.setBackground(new Color(30, 144, 255));
 		registroUsuariobtn.setIcon(new ImageIcon("C:\\Users\\josue\\Desktop\\Proyecto final PROG\\imagen\\registrored (1).png"));
 		registroUsuariobtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -87,6 +94,11 @@ public class Menu extends JFrame {
 		});
 		registroUsuariobtn.setBounds(316, 151, 142, 47);
 		panel.add(registroUsuariobtn);
+		
+		JLabel lblNewLabel = new JLabel("Sistema de Gestion Estudiantil");
+		lblNewLabel.setFont(new Font("Arial", Font.PLAIN, 20));
+		lblNewLabel.setBounds(139, 11, 285, 29);
+		panel.add(lblNewLabel);
 
 		
 		
