@@ -9,6 +9,8 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
+import java.awt.Font;
 
 public class Menu extends JFrame {
 
@@ -49,10 +51,13 @@ public class Menu extends JFrame {
 		panel.setLayout(null);
 		
 		JButton Estudiantesbtn = new JButton("Estudiantes");
+		Estudiantesbtn.setIcon(new ImageIcon("C:\\Users\\josue\\Desktop\\Proyecto final PROG\\imagen\\Estudiantes red(1) (1).png"));
+		Estudiantesbtn.setFont(new Font("Arial", Font.PLAIN, 11));
 		Estudiantesbtn.setBounds(122, 81, 142, 47);
 		panel.add(Estudiantesbtn);
 		
 		JButton Calificacionbtn = new JButton("Calificaciones");
+		Calificacionbtn.setIcon(new ImageIcon("C:\\Users\\josue\\Desktop\\Proyecto final PROG\\imagen\\Calificionesred (1) (1).png"));
 		Calificacionbtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 			}
@@ -62,6 +67,8 @@ public class Menu extends JFrame {
 		
 		
 		JButton Inscripcionbtn = new JButton("Inscripcion");
+		Inscripcionbtn.setFont(new Font("Arial", Font.PLAIN, 11));
+		Inscripcionbtn.setIcon(new ImageIcon("C:\\Users\\josue\\Desktop\\Proyecto final PROG\\imagen\\inscripcionred(2) (1).png"));
 		Inscripcionbtn.setBounds(122, 151, 142, 47);
 		panel.add(Inscripcionbtn);
 		Inscripcionbtn.addActionListener(new ActionListener() {	
@@ -71,6 +78,7 @@ public class Menu extends JFrame {
 		}});
 		
 		JButton registroUsuariobtn = new JButton("Registrar Usuario");
+		registroUsuariobtn.setIcon(new ImageIcon("C:\\Users\\josue\\Desktop\\Proyecto final PROG\\imagen\\registrored (1).png"));
 		registroUsuariobtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				registroUsuario registroUsuario = new registroUsuario();

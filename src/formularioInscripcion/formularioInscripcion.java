@@ -1,9 +1,7 @@
 package formularioInscripcion;
 
 import java.awt.EventQueue;
-import java.lang.module.*;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
