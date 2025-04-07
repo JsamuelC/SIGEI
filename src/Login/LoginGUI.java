@@ -2,6 +2,7 @@ package Login;
 
 
 import Conect.Conection;
+import MenuPrincipalGUI.Menu;
 import java.awt.EventQueue;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -94,6 +95,7 @@ public class LoginGUI extends JFrame {
 	}
 	
 	private void btnLogin() {
+		
 	 String usuario = this.LogUser.getText();
 	 String contra = new String(this.LogPsw.getPassword());
 	 
@@ -106,6 +108,9 @@ public class LoginGUI extends JFrame {
 		ResultSet rs = stmt.executeQuery();
 		if(rs.next()) {
 			mostrarMensaje("Welcome " + usuario);
+			this.dispose();
+			Menu Menu = new Menu();
+			Menu.setVisible(true);
 			
 			
 			

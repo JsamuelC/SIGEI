@@ -1,6 +1,7 @@
 package MenuPrincipalGUI;
 
 import java.awt.EventQueue;
+import formularioInscripcion.formularioInscripcion;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -48,7 +49,7 @@ public class Menu extends JFrame {
 		panel.setLayout(null);
 		
 		JButton Estudiantesbtn = new JButton("Estudiantes");
-		Estudiantesbtn.setBounds(10, 93, 127, 47);
+		Estudiantesbtn.setBounds(122, 81, 142, 47);
 		panel.add(Estudiantesbtn);
 		
 		JButton Calificacionbtn = new JButton("Calificaciones");
@@ -56,11 +57,35 @@ public class Menu extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 			}
 		});
-		Calificacionbtn.setBounds(183, 93, 152, 47);
+		Calificacionbtn.setBounds(318, 81, 140, 47);
 		panel.add(Calificacionbtn);
 		
+		
 		JButton Inscripcionbtn = new JButton("Inscripcion");
-		Inscripcionbtn.setBounds(371, 93, 142, 47);
+		Inscripcionbtn.setBounds(122, 151, 142, 47);
 		panel.add(Inscripcionbtn);
+		Inscripcionbtn.addActionListener(new ActionListener() {	
+		public void actionPerformed(ActionEvent e) {
+			inscripcion();
+			
+		}});
+		
+		JButton registroUsuariobtn = new JButton("Registrar Usuario");
+		registroUsuariobtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		registroUsuariobtn.setBounds(316, 151, 142, 47);
+		panel.add(registroUsuariobtn);
+
+		
+		
+	}
+	
+	private void inscripcion() {
+		formularioInscripcion formularioInscripcion = new formularioInscripcion();
+		formularioInscripcion.setVisible(true);
+		
+		
 	}
 }
