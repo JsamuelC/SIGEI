@@ -125,7 +125,6 @@ public class LoginGUI extends JFrame {
 		
 		ResultSet rs = stmt.executeQuery();
 		if(rs.next()) {
-			mostrarMensaje("Welcome " + usuario);
 			this.dispose();
 			Menu Menu = new Menu();
 			Menu.setVisible(true);

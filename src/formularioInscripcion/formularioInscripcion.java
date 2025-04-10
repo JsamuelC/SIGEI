@@ -131,7 +131,7 @@ public class formularioInscripcion extends JFrame {
 		contentPane.add(textTelefono);
 		textTelefono.setColumns(10);
 		
-		JLabel lblCarrera = new JLabel("Carrera");
+		JLabel lblCarrera = new JLabel("Materia\r\n");
 		lblCarrera.setFont(new Font("Tahoma", Font.BOLD, 13));
 		lblCarrera.setBounds(161, 401, 82, 14);
 		contentPane.add(lblCarrera);
@@ -159,17 +159,17 @@ public class formularioInscripcion extends JFrame {
 					String Matricula=textMatricula.getText();
 					String Correo= textCorreo.getText();
 					String Telefono= textTelefono.getText();
-					String Carrera= textCarrera.getText();
+					String Materias= textCarrera.getText();
 					String genero = rdbtnMasculino.isSelected() ? "Masculino" : "Femenino";
 					
 					try (Connection conn = Conection.getConnection()){
-						String query = "INSERT INTO Estudiantes (nombre, sexo, matricula, correo, carrera, telefono)  VALUES (?, ?, ?, ?, ?, ?)";
+						String query = "INSERT INTO Estudiantes (nombre, sexo, matricula, correo, Materias, telefono)  VALUES (?, ?, ?, ?, ?, ?)";
 						PreparedStatement stmt = conn.prepareStatement(query);
 						stmt.setString(1, nombre);
 						stmt.setString(2, genero);
 						stmt.setString(3, Matricula);
 						stmt.setString(4, Correo);
-						stmt.setString(5, Carrera);
+						stmt.setString(5, Materias);
 						stmt.setString(6, Telefono);
 						
 						int rows = stmt.executeUpdate();

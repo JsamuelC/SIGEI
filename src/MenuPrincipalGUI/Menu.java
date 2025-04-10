@@ -1,6 +1,8 @@
 package MenuPrincipalGUI;
 
 import java.awt.EventQueue;
+import EstudianteCrud.EstudianteGUI;
+import calificaciones.SistemadeCalificaciones;
 import formularioInscripcion.formularioInscripcion;
 import registroUsuario.registroUsuario;
 import javax.swing.JFrame;
@@ -54,6 +56,12 @@ public class Menu extends JFrame {
 		panel.setLayout(null);
 		
 		JButton Estudiantesbtn = new JButton("Estudiantes");
+		Estudiantesbtn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				EstudianteGUI EstudianteGUI = new EstudianteGUI();
+				EstudianteGUI.setVisible(true);
+			}
+		});
 		Estudiantesbtn.setBackground(new Color(30, 144, 255));
 		Estudiantesbtn.setIcon(new ImageIcon("C:\\Users\\josue\\Desktop\\Proyecto final PROG\\imagen\\Estudiantes red(1) (1).png"));
 		Estudiantesbtn.setFont(new Font("Arial", Font.PLAIN, 11));
@@ -65,6 +73,8 @@ public class Menu extends JFrame {
 		Calificacionbtn.setIcon(new ImageIcon("C:\\Users\\josue\\Desktop\\Proyecto final PROG\\imagen\\Calificionesred (1) (1).png"));
 		Calificacionbtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				SistemadeCalificaciones SistemadeCalificaciones = new SistemadeCalificaciones();
+				SistemadeCalificaciones.setVisible(true);
 			}
 		});
 		Calificacionbtn.setBounds(318, 81, 140, 47);
@@ -88,6 +98,7 @@ public class Menu extends JFrame {
 		registroUsuariobtn.setIcon(new ImageIcon("C:\\Users\\josue\\Desktop\\Proyecto final PROG\\imagen\\registrored (1).png"));
 		registroUsuariobtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
 				registroUsuario registroUsuario = new registroUsuario();
 				registroUsuario.setVisible(true);
 			}
@@ -110,4 +121,6 @@ public class Menu extends JFrame {
 		
 		
 	}
+	
+	
 }
